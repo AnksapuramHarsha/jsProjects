@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrieving Text</title>
+</head>
+<body>
+    <div class="container">
+        <h2>A message u like to pass</h2>
+        <input type="text" id="text"/>
+        <button id="submit">submit</button>
+        <div id="display"></div>
+    </div>
+</body>
+<script>
+    let id = document.getElementById("text");
+    let display=document.getElementById("display");
+    let btn=document.getElementById("submit");
+    btn.addEventListener("click",()=>{
+        let text = id.value;
+        display.innerHTML=text;
+    })
+    
+</script>
+</html>

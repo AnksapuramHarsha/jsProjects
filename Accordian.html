@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aqua;
+        }
+        .accordian .contentBx{
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .accordian .contentBx .question{
+            margin-bottom: 10px;
+            background-color: blue;
+            width:1000px;
+            
+            
+        }
+        .accordian .contentBx .question::before{
+            content:"+";
+            position: absolute;
+            right:50px;
+            color: aliceblue;
+        }
+        .accordian .contentBx .answer{
+            /* position: relative;
+            /* background-color: aliceblue;
+            height: 0px;
+            overflow: hidden;
+            overflow-y: auto; */ 
+            display: none;
+
+        }
+        /* .accordian .contentBx .active .answer{
+            height:120px;
+            padding: 10px;
+        } */
+    </style>
+</head>
+<body>
+    <div class="accordian">
+        <div class="contentBx">
+            <div class="question">q1</div>
+            <div class="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum autem eius sunt inventore cum harum eos accusantium natus nesciunt et. Tempora deserunt dolore eum corporis architecto laboriosam vel aspernatur dignissimos.</div>
+        </div>
+        <div class="contentBx">
+            <div class="question">q2</div>
+            <div class="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum autem eius sunt inventore cum harum eos accusantium natus nesciunt et. Tempora deserunt dolore eum corporis architecto laboriosam vel aspernatur dignissimos.</div>
+        </div>
+        <div class="contentBx">
+            <div class="question">q3</div>
+            <div class="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum autem eius sunt inventore cum harum eos accusantium natus nesciunt et. Tempora deserunt dolore eum corporis architecto laboriosam vel aspernatur dignissimos.</div>
+        </div>
+    </div>
+    <script>
+        const question=document.getElementsByClassName("question");
+        const answer=document.getElementsByClassName("answer");
+        console.log(question);
+        console.log(answer);
+        for(let i=0;i<question.length;i++){
+            question[i].addEventListener('click',function(){
+                if(answer[i].style.display==="none")
+                    answer[i].style.display="block";
+                else
+                    answer[i].style.display="none";
+            })
+        }
+    </script>
+</body>
+</html>

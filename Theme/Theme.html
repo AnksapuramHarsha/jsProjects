@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body.light{
+            background-color:aqua;
+        }
+        body.dark{
+            background-color: black;
+        }
+        .container{
+            width:100vw;
+            height:100vh;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container h2{
+            color: #c91010;
+
+        }
+        .container button.light{
+            background-color: black;
+            color: green;
+            padding:5px;
+            border: none;
+            font-size: 20px;
+        }
+        .container button.dark{
+            background-color: black;
+            color:yellow;
+            padding:5px;
+            border: none;
+            font-size: 20px;
+        }
+    </style>    
+</head>
+<body class="light">
+    <div class="container">
+        <h2>Light and Dark toggle</h2>
+        <button class="color-change light">click me</button>
+    </div>
+    <script src="Theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        .container{
+            width:500px;
+            height:300px;
+            border:2px solid black;
+            margin:auto;
+            overflow: hidden;
+            position:relative;
+        }
+        .slide{
+            width:100%;
+            height:100%;
+            position:absolute;
+            transition: 2s;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://picsum.photos/id/237/500/300" class="slide" alt="no image"/>
+        <img src="https://picsum.photos/id/238/500/300" class="slide" alt="no image"/>
+        <img src="https://picsum.photos/id/239/500/300" class="slide" alt="no image"/>
+        <img src="https://picsum.photos/id/240/500/300" class="slide" alt="no image"/>
+        <img src="https://picsum.photos/id/241/500/300" class="slide" alt="no image"/>
+ 
+    </div>
+    <div>
+        <button onclick="nextBtn()">next</button>
+        <button onclick="prevBtn()">prev</button>
+    </div>
+    <script src="ImageSlider.js"></script>
+</body>
+</html>
